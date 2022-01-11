@@ -1,6 +1,6 @@
-# Template Websites
+# Template Website
 
-Two templates website that I use to test out certain things.
+A templates website that I use to test out certain things.
 
 ## Getting Started
 
