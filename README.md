@@ -7,7 +7,7 @@ A templates website that I use to test out certain things.
 ### Installing
 
 ```
-$ git clone https://github.com/Leonardo-Wolo/websites.git
+$ git clone https://github.com/leonardowolo/websites.git
 ```
 
 ## Help
