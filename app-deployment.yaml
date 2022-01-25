@@ -1,0 +1,54 @@
+
+
+# App deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogger-webapp
+  labels:
+    app: blogger-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blogger-webapp
+  template:
+    metadata:
+      labels:
+        app: blogger-webapp
+    spec:
+      containers:
+      - name: blogger-webapp
+        image: leonardowolo/blogger-webapp:2.0
+        ports:
+        - containerPort: 80
+        # Define Resources to use
+        resources:
+          requests:
+            cpu: 500m
+            memory: 512Mi
+          limits:
+            cpu: 1
+            memory: 1Gi
+
+---
+
+# Frontend service
+apiVersion: v1
+kind: Service
+metadata:
+  name: blogger-webapp-service
+spec:
+  selector:
+    app: blogger-webapp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 443
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
+      # nodePort: 30000
+  type: ClusterIP
