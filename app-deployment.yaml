@@ -6,7 +6,7 @@ kind: Deployment
 metadata:
   name: blogger-webapp
   labels:
-    app: blogger-app
+    app: blogger-webapp
 spec:
   replicas: 3
   selector:
