@@ -10,9 +10,10 @@ metadata:
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   tls:
- - hosts:
-   - remotehomelab.be
-   secretName: remotelab-cert
+  - hosts:
+    - remotehomelab.be
+  secretName: remotelab-cert
+  
   rules:
   - host: remotehomelab.be
     http:
