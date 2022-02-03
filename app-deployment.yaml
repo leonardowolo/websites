@@ -51,4 +51,4 @@ spec:
       port: 443
       targetPort: 443
       # nodePort: 30000
-  type: LoadBalancer
+  type: ClusterIP
